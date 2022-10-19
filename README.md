@@ -3,7 +3,7 @@
 a nossa google drive - mas mais gira e irritante
 
 
-# Setup (this/any) repository
+# Set-up git and github
 
 So, this might seem like an unnecessary burden, but stick with it! - will make our lives easier in the end, and you'll learn something every programmer uses (...or so they say)!
 
