@@ -82,7 +82,7 @@ In our context, you are basically going to
 + first, _generate_ both of these keys (private and public);
 + second, provide the public key to <strong>github</strong> (you, holding the private one, can <em>decode</em> the messages that github is trying to send (only to you) - <em>encoded</em> with the public key you've given them for that effect!).
 
-(This encoding/decoding is considered safe by making use of some very fun theorems on number theory and probability/information theory.)
+(This encoding/decoding is considered safe by making use of some very fun theorems on number theory and probability/information/complexity theory.)
 </details> 
 <br>
 
