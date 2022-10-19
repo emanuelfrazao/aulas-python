@@ -1,6 +1,9 @@
 # Repositório de código das aulas
 
-## 1. Setup (this/any) repository
+a nossa google drive - mas mais gira e irritante
+
+
+# Setup (this/any) repository
 
 So, this might seem like an unnecessary burden, but stick with it! - will make our lives easier in the end, and you'll learn something every programmer uses (...or so they say)!
 
@@ -23,13 +26,13 @@ The idea of _this_ is for you to download the code that I'll place here, and tha
 </details><br>
 
 
-### **1.0. Assumptions**
+## Assumptions
 
 I am assuming you already have a `github.com` account.
 
 <br>
 
-### **1.1. Install `git` on your PC**
+## Install `git` on your PC
 
 Just download it [here](https://git-scm.com/downloads) and run the executable file that you've downloaded.
 
@@ -41,7 +44,7 @@ if it prints something like `git version 2.38.0`, you're good to go! (otherwise 
 
 <br>
 
-### **1.2. Set `git` user configurations**
+## Set `git` user configurations
 
 These will be your `github` information: the user name and the email address you've specified.
 
@@ -61,7 +64,7 @@ and by seeing what you specified on the console (hopefully!)
 
 <br>
 
-### **1.3. Connect your local `git` to your `github` automatically**
+## Connect your local `git` to your `github` automatically
 
 The connection is made via a comunication protocol called _SSH_ (which is _cryptographically safe_ - meaning, it is hard enough for someone else to interrupt your communication [with `github`, in our case] - so everyone uses it, `github` included). 
 
@@ -88,7 +91,10 @@ Now, every operating system nowadays comes with an `ssh` module (a function that
 
 You'll use that and then complete the procedure at your `github.com` user page. It is straight-forward enough.
 
-First, you need to generate your `ssh` **_keys_**: go again to your terminal and run (with your user email)
+
+### Generate `ssh` keys
+
+First, you need to generate your `ssh` **_keys_**: go again to your terminal and run (substituting your user email)
 
 ```
 ssh-keygen -C YOUR_USER_EMAIL
@@ -126,6 +132,8 @@ id_rsa id_rsa.pub
 ```
 the first being a file with the private key - the second, a file with the public one.
 
+### Add `ssh` agent to `git` (whatever that means)
+
 Then you have to add an agent that I honestly don't know the purpose of, but just run
 
 ```
@@ -142,20 +150,22 @@ and then run
 ```
 ssh-add ~/.ssh/id_rsa
 ```
-for them to reference your private key at 'somewhere important'. 
+for them to reference your private key @'somewhere important'. 
 
-And we're done with the key-creation part.
-Now you just have to save the public one (named `id_rsa.pub`) to `github.com`.
+### Lend _public_ key to `github`
+Now the final step: you just have to save the public one (named `id_rsa.pub`) to `github.com`.
 
 I could write the steps, but I think you're better off following this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent).
 
 After that, the proper set-up is done!
 
-# Downloading the repository for the first time
+# Download the whole repository for the first time
 
 Also known as _cloning_ the repository into your computer.
 
 The basic idea is that you are going to connect this repository with a directory on your computer (_i.e._, make them the same for now; and also know of each other - such as to keep up with any further changes). Then, as I have this repository also connected to a directory on my computer, we can keep our directories synchronized! - and voila, the purpose.
+
+## Clone repository
 
 So, in order to do that, you just have to go back to the terminal, move to a directory where you want to place this one (you can open the terminal on Finder, or move around within the terminal by running `cd DIRECTORY`), and then run
 
@@ -180,6 +190,10 @@ Then we'll discuss how to add _new stuff_: how can you put things on github such
 Also known as _pull_.
 
 TODO
+
+## Pull my new files and changes
+
+## Push your own new files and changes (for me to see)
 
 
 
