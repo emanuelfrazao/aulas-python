@@ -23,16 +23,16 @@ The idea of _this_ is for you to download the code that I'll place here, and tha
     the point is not that this functionality is so important to our purposes (but it might aswell be!); instead, it is what we need for using github - enter:
 </li>
 <li>
-    <strong>github</strong> is, as the name implies, a <em>hub</em> for <strong>git</strong>, _i.e._, it is an online center of files (and their versions), specifically targeted at code-files;
+    <strong>github</strong> is, as the name implies, a <em>hub</em> for <strong>git</strong>, <em>i.e.</em>, it is an online center of files (and their versions), specifically <em>code-files</em>;
 </li>
 <li>
-    being online, it can be accessed by anyone anywhere (much like <em>google drive</em>, but for <em>lighter</em> files), and has specifc functionality for having many people editing the _same_ files, those being _code-files_ - that's the point!
+    being online, it can be accessed by anyone and anywhere (much like <em>google drive</em>, but for <em>lighter</em> files), and has specifc functionality for having many people editing the _same_ files - that's the whole point!
 </li>
 <li>
     in this sense, <strong>github</strong> is basically a collection of <strong>repositories</strong>: each person can have theirs, and decide to share them with other people.
 </li>
 <li>
-    one can think of a <strong>repository</strong> as just a simple directory - with files and other sub-directories in it - as one has on its personal computer (or, for that matter, on google drive).
+    a <strong>repository</strong> is basically a directory - with files and other sub-directories in it - as one has on its personal computer (or, for that matter, on google drive).
 </li>
 </ul>
 
