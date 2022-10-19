@@ -8,7 +8,9 @@ The idea of _this_ is for you to download the code that I'll place here, and tha
 
 <details>
 <summary>( just a bit of context )</summary>
-
+<br>
+`git` is what is called a `version control system`
+ 
 
 </details><br>
 
