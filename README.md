@@ -155,19 +155,21 @@ for them to reference your private key @'somewhere important'.
 ### Lend _public_ key to `github`
 Now the final step: you just have to save the public one (named `id_rsa.pub`) to `github.com`.
 
-I could write the steps, but I think you're better off following this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent).
+I could write the steps, but I think you're better off following this [link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account). Note that you must substitute their references to `id_ed25519.pub` by your public key: `id_rsa.pub`. Note also that it is the contents of the file that matter (and they want), not the name!
 
 After that, the proper set-up is done!
 
 # Download the whole repository for the first time
 
-Also known as _cloning_ the repository into your computer.
+Also known as _cloning_ the repository into your computer. Now that you are properly set-up, you just need to actually download the files on the repository (these can be replicated for any other repository on github!, including your own)
 
 The basic idea is that you are going to connect this repository with a directory on your computer (_i.e._, make them the same for now; and also know of each other - such as to keep up with any further changes). Then, as I have this repository also connected to a directory on my computer, we can keep our directories synchronized! - and voila, the purpose.
 
 ## Clone repository
 
-So, in order to do that, you just have to go back to the terminal, move to a directory where you want to place this one (you can open the terminal on Finder, or move around within the terminal by running `cd DIRECTORY`), and then run
+So, in order to do that, you just have to go back to the terminal, move to a directory where you want to place this one (you can open a new terminal directly on Finder, or move around within the terminal by running `cd DIRECTORY`, for <strong>c</strong>hanging to that <strong>d</strong>irectory, `ls`, to <strong>l</strong>i<strong>s</strong>t what's in the directory you are currently in, and `pwd`, to get the <strong>p</strong>ath to the <strong>w</strong>orking <strong>d</strong>irectory - the one you're in).
+
+Then run
 
 ```
 git clone git@github.com:emanuelfrazao/aulas-python.git
@@ -178,22 +180,22 @@ You should immediatly see a message saying
 ```
 Cloning into 'aulas-python'...
 ```
-and then some stuff ending with `done.`.
+and then some stuff ending with `done.`. At this point, they will have created for you a directory named `aulas-python`, with all of the files (and directories structure) of this repository.
 
-And that's it! - hopefully!
+And that's it! - hopefully! (tell me whether you managed!)
 
-Then we'll discuss how to add _new stuff_: how can you put things on github such that I can download them, and vice-versa. No more cloning! - now it will be called _pulling_.
+Then we'll discuss how to add _new stuff_: how you can put things on `github` such that I can download them, and vice-versa. No more cloning! - now it will be called _pulling_.
 
 
-# Downloading new stuff from repository
+# Download and add new stuff from/to repository
 
 Also known as _pull_.
 
 TODO
 
-## Pull my new files and changes
+## Download/Pull my new files and changes
 
-## Push your own new files and changes (for me to see)
+## Add/Push your new files and changes (for me to see)
 
 
 
