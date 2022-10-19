@@ -10,31 +10,44 @@ So, this might seem like an unnecessary burden, but stick with it! - will make o
 The idea of _this_ is for you to download the code that I'll place here, and that eventually you can also _push_ your own code, such that I can look at it.
 
 <details>
-<summary>( just a bit of context )</summary>
+<summary>info</summary>
 <br>
 <ul>
-<li><strong>git</strong> is what is called a <em>version control system</em>: <em>i.e.</em>, (a fancy name for) a tool that keeps track of your files' history/<em>versions</em> (if you so tell it to...); the point is not that this functionality is so important to our purposes (but it might aswell be!); instead, it is what we need for using github - enter:
+<li>
+    <strong>git</strong> is what is called a <em>version control system</em>: <em>i.e.</em>, (a fancy name for) a tool that keeps track of your files' history/<em>versions</em> (if you so tell it to...);
 </li>
 <li>
-<strong>github</strong> is, as the name implies, a <em>hub</em> for <strong>git</strong>, which makes it a hub for files (and their versions); and being online, it can be accessed by anyone anywhere (much like <em>google drive</em>, but for <em>lighter</em> files, and with functionality for having many people editing and sharing them) - that's the point!
+    furthermore, <strong>git</strong> is also the name of the command that you will run on your terminal for asking it to do stuff
+</li>
+<li>
+    the point is not that this functionality is so important to our purposes (but it might aswell be!); instead, it is what we need for using github - enter:
+</li>
+<li>
+    <strong>github</strong> is, as the name implies, a <em>hub</em> for <strong>git</strong>, _i.e._, it is an online center of files (and their versions), specifically targeted at code-files;
+</li>
+<li>
+    being online, it can be accessed by anyone anywhere (much like <em>google drive</em>, but for <em>lighter</em> files), and has specifc functionality for having many people editing the _same_ files, those being _code-files_ - that's the point!
+</li>
+<li>
+    in this sense, <strong>github</strong> is basically a collection of <strong>repositories</strong>: each person can have theirs, and decide to share them with other people.
+</li>
+<li>
+    one can think of a <strong>repository</strong> as just a simple directory - with files and other sub-directories in it - as one has on its personal computer (or, for that matter, on google drive).
 </li>
 </ul>
-
-  enough context!
- 
 
 </details><br>
 
 
 ## Assumptions
 
-I am assuming you already have a `github.com` account.
+I am assuming you already have a `https://www.github.com` account.
 
 <br>
 
 ## Install `git` on your PC
 
-Just download it [here](https://git-scm.com/downloads) and run the executable file that you've downloaded.
+Just download the installer [here](https://git-scm.com/downloads), and run by clicking the thing [as an _executable_].
 
 In order to check whether it is installed, open a _terminal_ (MAC) or _Git-Bash_ (Windows) (it should be installed if you installed `Git`), and  run 
 ```bash
@@ -44,11 +57,11 @@ if it prints something like `git version 2.38.0`, you're good to go! (otherwise 
 
 <br>
 
-## Set `git` user configurations
+## Set `git` user configuration
 
 These will be your `github` information: the user name and the email address you've specified.
 
-Just go again to the _terminal_ and run:
+Just go again to the _terminal_ and run (substituting your credentials):
 ```
 git config --global user.name YOUR_USER_NAME
 ```
@@ -66,35 +79,37 @@ and by seeing what you specified on the console (hopefully!)
 
 ## Connect your local `git` to your `github` automatically
 
-The connection is made via a comunication protocol called _SSH_ (which is _cryptographically safe_ - meaning, it is hard enough for someone else to interrupt your communication [with `github`, in our case] - so everyone uses it, `github` included). 
+The connection is made via a comunication protocol called _SSH_ (which is _cryptographically safe_ - meaning, it is hard enough for someone else to intercept/read the communication [between you and `github`, in our case] - so everyone uses it, `github` included).  The reason I mention this is that we're going to use it.
 
 
 <details open>
-<summary>( just a bit of [useless] context )</summary>
+<summary>[useless] info</summary>
 <br>
 SSH is based on a system of public and private keys.
 
 The idea behind it is that 
-+ person A shares her public key, and keep the private one to herself (...as the names would suggest!); 
-+ then, anyone with the public key (say, person B) can encode their messages with it - such as putting them on a small safe - and in such a way that only someone with the private key can open (and thus read -) them.
++ person A shares her public key, and keeps the private one to herself (...as the names would suggest!); 
++ then, anyone with the public key (say, person B) can encrypt their messages with it - such as putting them on a small safe - and in such a way that only someone with the private key can decrypt (and thus read -) them.
 
 In our context, you are basically going to 
 + first, _generate_ both of these keys (private and public);
-+ second, provide the public key to <strong>github</strong> (you, holding the private one, can <em>decode</em> the messages that github is trying to send (only to you) - <em>encoded</em> with the public key you've given them for that effect!).
++ second, provide the public key to <strong>github</strong> (you, holding the private one, can <em>decrypted</em> the messages that github is trying to send (only to you) - <em>encrypted</em> with the public key you've given them for that effect!).
 
-(This encoding/decoding is considered safe by making use of some very fun theorems on number theory and probability/information/complexity theory.)
+(This encrypting/decrypting system is considered safe by making use of some very fun theorems on number theory and complexity theory - also some probability and information theory.)
+
+enough context!
 </details> 
 <br>
 
 
-Now, every operating system nowadays comes with an `ssh` module (a function that you can run on the command line, such as `git`, except it comes _built in_ - no need to install) to perform certain operations; so yours should have it.
+Now, every operating system nowadays comes with an `ssh` module (a function that you can run on the command line [a.k.a. terminal], such as `git`, except it comes _built in_ - no need to install) to perform some encryption-related operations that are widely used; so yours should have it.
 
 You'll use that and then complete the procedure at your `github.com` user page. It is straight-forward enough.
 
 
 ### Generate `ssh` keys
 
-First, you need to generate your `ssh` **_keys_**: go again to your terminal and run (substituting your user email)
+First, you need to generate your `ssh` _keys_: go again to your terminal and run (substituting your user email)
 
 ```
 ssh-keygen -C YOUR_USER_EMAIL
